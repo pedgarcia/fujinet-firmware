@@ -467,7 +467,7 @@ long FileSystemSDFAT::mtime(const char *path)
 */
 bool FileSystemSDFAT::create_path(const char *path)
 {
-    char segment[64];
+    char segment[MAX_PATHLEN];
 
 #ifdef ESP_PLATFORM
     const char *fullpath = path;
